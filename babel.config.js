@@ -9,6 +9,7 @@ module.exports = function (api) {
         corejs: 3.6,
         targets: { esmodules: true },
       },
+      "@babel/preset-typescript",
     ],
   ];
   const plugins = [["@babel/plugin-proposal-decorators", { legacy: true }]];

@@ -1,27 +1,35 @@
 # Testing101
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+## Types of Tests
 
-## Development server
+- Unit tests
+- Integration tests
+- End to end tests
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## [Jest](https://jestjs.io)
 
-## Code scaffolding
+Jest is a testing framework built on top of Jasmine, and it is used for unit and integration testing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Unit Tests
 
-## Build
+Tests an individual function or component (in other words, a single _unit_); all functions or components needed to run the test are _mocked_.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Integration Tests
 
-## Running unit tests
+Integration tests verify that different parts of the application work well together, such as components and services.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running unit and integration tests
+
+Run `ng test` to execute the unit tests via Jest.
+
+## [Cypress](https://docs.cypress.io)
+
+Cypress is an end to end testing framework
+
+### End to End Tests
+
+End to end tests replicate user behavior throughout the entire application from end to end, verifying that a user flow works as expected.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng e2e` to execute the end-to-end tests via Cypress.
