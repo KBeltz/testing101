@@ -18,7 +18,7 @@ Tests an individual function or component (in other words, a single _unit_); all
 
 Integration tests verify that different parts of the application work well together, such as components and services.
 
-## Running unit and integration tests
+### Running unit and integration tests
 
 Run `ng test` to execute the unit tests via Jest.
 
@@ -30,6 +30,6 @@ Cypress is an end to end testing framework
 
 End to end tests replicate user behavior throughout the entire application from end to end, verifying that a user flow works as expected.
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via Cypress.
