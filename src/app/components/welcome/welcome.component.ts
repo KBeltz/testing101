@@ -14,4 +14,8 @@ export class WelcomeComponent implements OnInit {
   nextSection(): void {
     this.num++;
   }
+
+  reset(): void {
+    this.num = 101;
+  }
 }
