@@ -32,6 +32,10 @@ You can think of a unit as a function or method. You thus write a unit test by w
 
 Integration tests verify that different parts of the application work well together, such as components and services.
 
+- Scope can span multiple components, but should not span the entire application
+- More expensive to implement than unit tests
+- Higher level than unit testing
+
 ### Running unit and integration tests
 
 Run `ng test` to execute the tests via Jest.
@@ -44,6 +48,11 @@ Cypress is an end to end testing framework
 
 End to end tests replicate user behavior throughout the entire application from end to end, verifying that a user flow works as expected.
 
+- Scope spans the entire application stack from frontend to backend
+- Most expensive to implement, both in terms of hardware and software
+- Higher level than integration testing
+- Slowest to perform
+
 ### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via Cypress.
@@ -52,7 +61,18 @@ Run `ng e2e` to execute the end-to-end tests via Cypress.
 
 - Test cost varies: Unit < Integration < e2e
   - Writing a lot of unit tests is the best way to make a big impact on your application without a large overhead
-  - Integration tests are a bit more difficult than unit tests ???
-  - e2e tests should be planned
-- If there is a bug in the code, write a test when you fix it
-- // needs work
+  - Integration tests are a bit more complex to implement than unit tests
+  - e2e tests have higher setup and maintenance cost, and should be planned only for large, commonly used user flows
+    - First e2e test suggestion: signup process
+- Every bug fix should have an associated test that verifies that the bug is fixed
+- All new code should have associated tests
+- Zero tolerance policy for failing tests
+  - Test failures should indicate a bug in the code, which should be addressed right away
+  - Failing tests cost time and money to investigate each time they fail, and should be kept up-to-date each time the application chantes
+  - Don't skip them
+- Code Coverage?
+  - Code coverage is a measure of how much of the production code is executed when your automated tests are running
+  - Increasing code coverage is good, but reaching 100% coverage is not necessarily achievable (and quality > quantity anyway)
+  - Best for finding gaps in testing
+  - Good initial goal to strive for: 60%
+  - Good overall goal: 80%
