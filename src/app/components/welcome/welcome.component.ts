@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
@@ -6,16 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.scss'],
 })
 export class WelcomeComponent implements OnInit {
-  num: number = 101;
+  @Input() classSection: number = 0;
   constructor() {}
 
   ngOnInit(): void {}
 
   nextSection(): void {
-    this.num++;
+    this.classSection++;
   }
 
   reset(): void {
-    this.num = 101;
+    this.classSection = 101;
+  }
+
+  toggleColor(): void {
+    document.getElementById('color-btn')?.classList.contains('btn-success')
+      ? document
+          .getElementById('color-btn')
+          ?.classList.replace('btn-success', 'btn-info')
+      : document
+          .getElementById('color-btn')
+          ?.classList.replace('btn-info', 'btn-success');
   }
 }
